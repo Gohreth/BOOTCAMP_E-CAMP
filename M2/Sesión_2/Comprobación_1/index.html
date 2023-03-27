@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <style>
+      label {
+        display: block;
+      }
+      input {
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>FORMULARIO</h1>
+    <form action="./thanks.html">
+      <div>
+        <label for="name">NOMBRE</label>
+        <input required type="text" id="name" />
+      </div>
+      <div>
+        <label for="address">DIRECCIÓN</label>
+        <input required type="text" id="address" />
+      </div>
+      <div>
+        <label for="medical-specialty">ESPECIALIDAD MÉDICA</label>
+        <input required type="text" id="medical-specialty" list="specialties" />
+        <datalist name="specialties" id="specialties">
+          <option value="MEDICINA INTERNA">MEDICINA INTERNA</option>
+          <option value="MEDICINA GENERAL">MEDICINA GENERAL</option>
+          <option value="TRAUMATOLOGIA">TRAUMATOLOGIA</option>
+          <option value="NUTRICIONISTA">NUTRICIONISTA</option>
+        </datalist>
+      </div>
+      <div>
+        <label for="date">FECHA</label>
+        <input required type="date" id="date" />
+      </div>
+      <div>
+        <label for="date-time">HORA</label>
+        <input required type="time" id="date-time" />
+      </div>
+      <div>
+        <label for="email">CORREO</label>
+        <input required type="email" id="email" />
+      </div>
+      <button>CONFIRMAR</button>
+    </form>
+  </body>
+</html>
