@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>“Nimrodel Pub Restaurant”</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img class="logo__image" src="./assets/n.png" alt="Logo restaurant" />
+        <div class="logo__name">
+          <h1>Nimrodel Pub</h1>
+          <h2>Restaurant</h2>
+        </div>
+      </div>
+      <ul>
+        <li>
+          <a href="#products">Productos</a>
+        </li>
+        <li>
+          <a href="#contact-us">Contáctanos</a>
+        </li>
+        <li>
+          <a href="#reservation">Reserva</a>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <section id="products">
+        <h2>Productos destacados:</h2>
+        <div class="cards">
+          <article class="card">
+            <img class="card__image" src="./assets/bebidas.jpg" alt="Bebidas" />
+            <div class="card__body">
+              <p class="body__title">Bebida</p>
+              <div class="divider"></div>
+              <p class="body__content">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos
+                accusantium voluptatum non dicta blanditiis itaque facilis. Sunt
+                quidem doloremque est omnis minus blanditiis vel voluptatum
+                itaque, cupiditate consectetur cum laudantium veritatis nobis
+                vero voluptatibus praesentium sit, fugit ratione repudiandae!
+                Doloribus dicta, molestias quisquam mollitia sunt eligendi
+                dignissimos dolores asperiores et?
+              </p>
+              <div class="divider"></div>
+              <p class="body__price">$3.000</p>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card__image" src="./assets/shop.jpeg" alt="Shop" />
+            <div class="card__body">
+              <p class="body__title">Shop</p>
+              <div class="divider"></div>
+              <p class="body__content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+              </p>
+              <div class="divider"></div>
+              <p class="body__price">$2.000</p>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card__image" src="./assets/tablas.jpg" alt="Tablas" />
+            <div class="card__body">
+              <p class="body__title">Tabla</p>
+              <div class="divider"></div>
+              <p class="body__content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+              </p>
+              <div class="divider"></div>
+              <p class="body__price">$4.000</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="contact-us">
+        <form>
+          <h2>Comuniquemonos</h2>
+          <div class="form__field">
+            <label for="contact-nombre">Nombre</label>
+            <input type="text" id="contact-nombre" />
+          </div>
+          <div class="form__field">
+            <label for="contact-correo">Correo</label>
+            <input type="email" id="contact-correo" />
+          </div>
+          <div class="form__field">
+            <label for="contact-teléfono">Teléfono</label>
+            <input type="tel" inputmode="tel" id="contact-teléfono" />
+          </div>
+          <div class="form__field">
+            <label for="contact-motivo">Motivo</label>
+            <input type="text" id="contact-motivo" />
+          </div>
+          <textarea
+            name="contact-explicación"
+            id="contact-explicación"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+        <button class="open-button">Abrir contacto</button>
+      </section>
+      <section id="reservation">
+        <form>
+          <h2>Reserva</h2>
+          <div class="form__field">
+            <label for="reservation-nombre">Nombre</label>
+            <input type="text" id="reservation-nombre" />
+          </div>
+          <div class="form__field">
+            <label for="reservation-correo">Correo</label>
+            <input type="email" id="reservation-correo" />
+          </div>
+          <div class="form__field">
+            <label for="reservation-teléfono">Teléfono</label>
+            <input type="tel" inputmode="tel" id="reservation-teléfono" />
+          </div>
+          <div class="form__field">
+            <label for="reservation-fecha">Fecha</label>
+            <input type="date" id="reservation-fecha" />
+          </div>
+          <div class="form__field">
+            <label for="reservation-hora">Hora</label>
+            <input type="time" id="reservation-hora" />
+          </div>
+          <div class="form__field">
+            <label for="reservation-asistentes">Cantidad de asistentes</label>
+            <input type="number" id="reservation-asistentes" />
+          </div>
+          <button type="submit">Reservar</button>
+        </form>
+        <button class="open-button">Abrir reserva</button>
+      </section>
+    </main>
+    <footer>Todos los derechos reservados &#174;</footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

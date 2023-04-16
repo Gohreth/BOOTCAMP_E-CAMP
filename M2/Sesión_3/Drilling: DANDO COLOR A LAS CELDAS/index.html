@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Celdas</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        padding: 2rem;
+      }
+      .table {
+        display: grid;
+        border: 0.75px solid rgb(191, 191, 191);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+          "red white green gray"
+          "brown blue violet violet"
+          "brown pink yellow turquoise"
+          "orange purple yellow black";
+        padding: 2px;
+        gap: 2px;
+        width: max-content;
+      }
+      .table__element {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+      }
+      .violet {
+        background-color: violet;
+        grid-area: violet;
+      }
+      .pink {
+        background-color: pink;
+        grid-area: pink;
+      }
+      .yellow {
+        background-color: yellow;
+        grid-area: yellow;
+      }
+      .turquoise {
+        background-color: turquoise;
+        grid-area: turquoise;
+      }
+      .orange {
+        background-color: orange;
+        grid-area: orange;
+      }
+      .purple {
+        background-color: purple;
+        grid-area: purple;
+      }
+      .black {
+        color: white;
+        background-color: black;
+        grid-area: black;
+      }
+      .red {
+        background-color: red;
+        grid-area: red;
+      }
+      .white {
+        background-color: white;
+        grid-area: white;
+      }
+      .green {
+        background-color: green;
+        grid-area: green;
+      }
+      .gray {
+        background-color: gray;
+        grid-area: gray;
+      }
+      .brown {
+        background-color: brown;
+        grid-area: brown;
+      }
+      .blue {
+        background-color: blue;
+        grid-area: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table">
+      <div class="table__element red">ROJO</div>
+      <div class="table__element white">BLANCO</div>
+      <div class="table__element green">VERDE</div>
+      <div class="table__element gray">GRIS</div>
+      <div class="table__element brown">CAFE</div>
+      <div class="table__element blue">AZUL</div>
+      <div class="table__element violet">VIOLETA</div>
+      <div class="table__element pink">ROSADO</div>
+      <div class="table__element yellow">AMARILLO</div>
+      <div class="table__element turquoise">TURQUESA</div>
+      <div class="table__element orange">NARANJO</div>
+      <div class="table__element purple">PURPURA</div>
+      <div class="table__element black">NEGRO</div>
+    </div>
+  </body>
+</html>
