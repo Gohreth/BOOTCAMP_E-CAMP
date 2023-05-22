@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>PRESUPUESTO APP</h1>
+    <div class="vertical-flex">
+      <div class="horizontal-flex">
+        <div class="actions-container">
+          <div class="card card--green">
+            <label for="budget"> Ingresa tu presupuesto </label>
+            <input type="number" name="budget" id="budget-input" />
+            <button type="button" id="budget-btn">Calcular</button>
+          </div>
+        </div>
+        <div class="budget-container">
+          <div class="budget__information">
+            <div class="information__element">
+              <p>presupuesto</p>
+              <p><span>$ </span><span id="total-budget">Indefinido</span></p>
+            </div>
+            <div class="information__element">
+              <p>gastos</p>
+              <p><span>$ </span><span id="total-expenses">Indefinido</span></p>
+            </div>
+            <div class="information__element">
+              <p>saldo</p>
+              <p><span>$ </span><span id="total-balance">Indefinido</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="horizontal-flex">
+        <div class="actions-container">
+          <div class="card card--red">
+            <label for="expense-name">ingresa el nombre del gasto</label>
+            <input type="text" name="expense-name" id="expense-name" />
+            <label for="expense-value">ingresa la cantidad del gasto</label>
+            <input type="number" name="expense-value" id="expense-value" />
+            <button type="button" id="expense-btn">añadir gasto</button>
+          </div>
+        </div>
+        <div class="budget-container">
+          <div class="budget__expenses">
+            <div class="expenses__headers">
+              <p>gastos</p>
+              <p>valor</p>
+              <p></p>
+            </div>
+            <ul id="expenses-listing"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

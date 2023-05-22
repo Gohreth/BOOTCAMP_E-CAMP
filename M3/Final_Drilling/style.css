@@ -1,0 +1,177 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 1rem;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+}
+
+input {
+  background-color: inherit;
+  border: none;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  text-transform: inherit;
+  border: inherit;
+  border-radius: inherit;
+  padding: inherit;
+}
+
+.horizontal-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: start;
+  gap: 2rem;
+}
+
+.vertical-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 2rem;
+}
+
+.card {
+  border-radius: 10px;
+  border: 3px solid;
+  padding: 0.5rem;
+  text-transform: capitalize;
+}
+
+.card > input {
+  width: 100%;
+  padding: 5px;
+}
+
+.card > * {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.card > *:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+.card--green > *:nth-last-child(1) {
+  color: rgb(0, 179, 0);
+}
+
+.card--red > *:nth-last-child(1) {
+  color: rgb(255, 63, 63);
+}
+
+.card--green {
+  border-color: rgb(0, 179, 0);
+  background-color: rgb(223, 255, 223);
+}
+
+.card--red {
+  border-color: rgb(255, 63, 63);
+  background-color: rgb(255, 178, 178);
+}
+
+.actions-container {
+  flex-basis: 100%;
+}
+
+.budget-container {
+  flex-basis: 100%;
+  text-transform: uppercase;
+}
+
+.budget__information {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.information__element {
+  text-align: center;
+}
+
+.information__element > *:nth-last-child(1) {
+  font-weight: bold;
+}
+
+.information__element > * {
+  display: block;
+}
+
+.budget__expenses > * {
+  position: relative;
+}
+
+.budget__expenses > *::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 1.5px;
+  background-color: lightgray;
+}
+
+.budget__expenses > *:first-child:after {
+  background-color: black;
+}
+
+.expenses__headers {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.expenses__headers > * {
+  flex-basis: 100%;
+}
+
+.expenses__item {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.expenses__item > * {
+  flex-basis: 100%;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: start;
+}
+
+.icon {
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  color: blue;
+}
+
+.icon:hover {
+  color: red;
+}
