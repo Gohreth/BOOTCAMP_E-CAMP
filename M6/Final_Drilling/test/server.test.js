@@ -1,9 +1,8 @@
 const chai = require("chai");
 const chaiHttp = require("chai-http");
 const { server } = require("../index");
-
-//Datos disponibles actualmente obtenidos desde el archivo .json, se utilizará para comparar con las respuestas del servidor
-const data = require("../anime.json");
+const { before, beforeEach, after } = require("mocha");
+const fs = require("fs/promises");
 
 chai.use(chaiHttp);
 
@@ -21,6 +20,37 @@ describe("Testeando respuesta de servidor", () => {
 });
 
 describe("Testeando CRUD", () => {
+  let backupData;
+  let data, autoIndex;
+  before(async () => {
+    try {
+      backupData = await fs.readFile("./anime.test.json", "utf-8");
+    } catch (error) {
+      console.log(error);
+    }
+  });
+
+  beforeEach(async () => {
+    try {
+      data = await fs.readFile("./anime.test.json", "utf-8");
+      data = JSON.parse(data);
+      autoIndex = await fs.readFile("./auto_index.test.txt", "utf-8");
+      autoIndex = parseInt(autoIndex);
+    } catch (error) {
+      console.log(error);
+    }
+  });
+
+  after(async () => {
+    try {
+      await fs.writeFile("./anime.test.json", backupData, "utf-8");
+      await fs.access("./auto_index.test.txt");
+      await fs.rm("./auto_index.test.txt");
+    } catch (error) {
+      console.log(error);
+    }
+  });
+
   it("Comprobando respuesta GET sin id ni nombre", (done) => {
     chai
       .request(server)
@@ -103,7 +133,7 @@ describe("Testeando CRUD", () => {
     };
 
     let expectedData = structuredClone(data);
-    expectedData[(Object.keys(data).length + 1).toString()] = newEntry;
+    expectedData[(autoIndex + 1).toString()] = newEntry;
 
     chai
       .request(server)
@@ -127,7 +157,7 @@ describe("Testeando CRUD", () => {
     };
 
     let expectedData = structuredClone(data);
-    expectedData[(Object.keys(data).length + 1).toString()] = newEntry;
+    expectedData[(autoIndex + 1).toString()] = newEntry;
 
     chai
       .request(server)
